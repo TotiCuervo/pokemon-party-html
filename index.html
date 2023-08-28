@@ -2,6 +2,11 @@
 <html>
 <head>
 <style>
+
+    body {
+        margin: 0
+    }
+
     .w-screen {
         width: 100vw;
     }
@@ -26,7 +31,7 @@
     .container {
         background-color: rgb(70, 164, 157);
         display: flex;
-        /* padding: 5px; */
+        padding: 5px;
     }
     .pokemon-slot {
         border-style: solid;
@@ -120,15 +125,20 @@
         color: white;
         font-size: 20px;
     }
+    .right-side {
+        flex: 1;
+        padding-right: 5px;
+    }
     .left-side {
-        width: 50%;
+        flex: 1;
+        padding-left: 5px;
     }
 </style>
 </head>
 <body>
 
-<div class="container w-screen h-screen">
-    <div class="w-1/2">
+<div class="container h-screen">
+    <div class="right-side">
         <!-- bulbasaur -->
         <div class="pokemon-slot alive">
             <div class="info-section" >
@@ -236,112 +246,113 @@
         
     </div>
     <div class="left-side">
-    <!-- bulbasaur -->
-    <div class="pokemon-slot alive">
-        <div class="info-section" >
-            <div class="sprite-section">
-                <img src="1.png" alt="Pokemon">
-            </div>
-            <div class="flex-grow">
-                <div class="w-full">
-                    <span class="pokemon-name">Bulbasaur</span>
+        <!-- bulbasaur -->
+        <div class="pokemon-slot alive">
+            <div class="info-section" >
+                <div class="sprite-section">
+                    <img src="1.png" alt="Pokemon">
                 </div>
-                <div class="w-full">
-                    <div class="hp-container">
-                        <span class="hp-text">HP</span>
-                        <div class="hp-inner-container hp-filler-filled">
-                        </div>  
+                <div class="flex-grow">
+                    <div class="w-full">
+                        <span class="pokemon-name">Bulbasaur</span>
+                    </div>
+                    <div class="w-full">
+                        <div class="hp-container">
+                            <span class="hp-text">HP</span>
+                            <div class="hp-inner-container hp-filler-filled">
+                            </div>  
+                        </div>
                     </div>
                 </div>
+                <div class="gender-section">
+                    <img class="male-icon" src="https://www.iconsdb.com/icons/preview/green/male-xxl.png" alt="Pokemon">
+                </div>
             </div>
-            <div class="gender-section">
-                <img class="male-icon" src="https://www.iconsdb.com/icons/preview/green/male-xxl.png" alt="Pokemon">
+            <div class="extra-section">
+                <div class="w-auto">
+                    <div class="level-text">
+                        Lv. 5
+                    </div>
+                    
+                </div>
+                <div class="hp-section">
+                    <span class="hp-bottom-text">0/112</span>
+                </div>
             </div>
         </div>
-        <div class="extra-section">
-            <div class="w-auto">
-                <div class="level-text">
-                    Lv. 5
+        <!-- charmander -->
+        <div class="pokemon-slot alive">
+            <div class="info-section" >
+                <div class="sprite-section">
+                    <!-- get charmander sprite from github api -->
+                    <img src="4.png" alt="Pokemon">
                 </div>
-                
-            </div>
-            <div class="hp-section">
-                <span class="hp-bottom-text">0/112</span>
-            </div>
-        </div>
-    </div>
-    <!-- charmander -->
-    <div class="pokemon-slot alive">
-        <div class="info-section" >
-            <div class="sprite-section">
-                <!-- get charmander sprite from github api -->
-                <img src="4.png" alt="Pokemon">
-            </div>
-            <div class="flex-grow">
-                <div class="w-full">
-                    <span class="pokemon-name">Charmander</span>
-                </div>
-                <div class="w-full">
-                    <div class="hp-container">
-                        <span class="hp-text">HP</span>
-                        <div class="hp-inner-container hp-filler-filled">
-                        </div>  
+                <div class="flex-grow">
+                    <div class="w-full">
+                        <span class="pokemon-name">Charmander</span>
+                    </div>
+                    <div class="w-full">
+                        <div class="hp-container">
+                            <span class="hp-text">HP</span>
+                            <div class="hp-inner-container hp-filler-filled">
+                            </div>  
+                        </div>
                     </div>
                 </div>
+                <div class="gender-section">
+                    <img class="male-icon" src="https://www.iconsdb.com/icons/preview/red/female-xxl.png" alt="Pokemon">
+                </div>
             </div>
-            <div class="gender-section">
-                <img class="male-icon" src="https://www.iconsdb.com/icons/preview/red/female-xxl.png" alt="Pokemon">
+            <div class="extra-section">
+                <div class="w-auto">
+                    <div class="level-text">
+                        Lv. 5
+                    </div>
+                    
+                </div>
+                <div class="hp-section">
+                    <span class="hp-bottom-text">0/112</span>
+                </div>
             </div>
         </div>
-        <div class="extra-section">
-            <div class="w-auto">
-                <div class="level-text">
-                    Lv. 5
+        <!-- squirtle -->
+        <div class="pokemon-slot fainted">
+            <div class="info-section fainted" >
+                <div class="sprite-section">
+                    <!-- get squirtle sprite from github api -->
+                    <img src="7.png" alt="Pokemon">
                 </div>
-                
-            </div>
-            <div class="hp-section">
-                <span class="hp-bottom-text">0/112</span>
-            </div>
-        </div>
-    </div>
-    <!-- squirtle -->
-    <div class="pokemon-slot fainted">
-        <div class="info-section fainted" >
-            <div class="sprite-section">
-                <!-- get squirtle sprite from github api -->
-                <img src="7.png" alt="Pokemon">
-            </div>
-            <div class="flex-grow">
-                <div class="w-full">
-                    <span class="pokemon-name">Charmander</span>
-                </div>
-                <div class="w-full">
-                    <div class="hp-container">
-                        <span class="hp-text">HP</span>
-                        <div class="hp-inner-container hp-filler-empty">
-                        </div>  
+                <div class="flex-grow">
+                    <div class="w-full">
+                        <span class="pokemon-name">Charmander</span>
+                    </div>
+                    <div class="w-full">
+                        <div class="hp-container">
+                            <span class="hp-text">HP</span>
+                            <div class="hp-inner-container hp-filler-empty">
+                            </div>  
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="gender-section">
-                <img class="male-icon" src="https://www.iconsdb.com/icons/preview/red/female-xxl.png" alt="Pokemon">
-            </div>
-        </div>
-        <div class="extra-section fainted">
-            <div class="w-auto">
-                <div class="level-text">
-                    Lv. 5
+                <div class="gender-section">
+                    <img class="male-icon" src="https://www.iconsdb.com/icons/preview/red/female-xxl.png" alt="Pokemon">
                 </div>
-                
             </div>
-            <div class="hp-section">
-                <span class="hp-bottom-text">0/112</span>
+            <div class="extra-section fainted">
+                <div class="w-auto">
+                    <div class="level-text">
+                        Lv. 5
+                    </div>
+                    
+                </div>
+                <div class="hp-section">
+                    <span class="hp-bottom-text">0/112</span>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
+        </div>
 </div>
 
 </body>
 </html>
+
